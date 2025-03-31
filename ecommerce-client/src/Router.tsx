@@ -7,6 +7,8 @@ import { AdminLayout } from "./pages/AdminLayout";
 import { AdminOrders } from "./pages/AdminOrders";
 import { AdminProducts } from "./pages/AdminProducts";
 import { AdminCustomers } from "./pages/AdminCustomers";
+import { AdminUpdateProduct } from "./pages/AdminUpdateProduct";
+import { AdminCreateProduct } from "./pages/AdminCreateProduct";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ export const router = createBrowserRouter([
       {
         path: "customers",
         element: <AdminCustomers />,
+      },
+      {
+        path: "update-product/:id",
+        element: <AdminUpdateProduct />,
+      },
+      {
+        path: "create-product",
+        element: <AdminCreateProduct />,
       },
     ],
   },

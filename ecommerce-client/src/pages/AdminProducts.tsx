@@ -27,8 +27,12 @@ export const AdminProducts = () => {
 
   const actions: TableAction<IProduct & { id: number }>[] = [
     {
-      label: <FaEdit size={16} />,
-      onClick: (product) => alert(`Edit ${product.title}`),
+      getLabel: (product) => (
+        <Link to={`/admin/update-product/${product.id}`}>
+          <FaEdit size={16} />
+        </Link>
+      ),
+      onClick: () => {},
       className: "hover:text-blue-600 cursor-pointer",
     },
     {
@@ -44,7 +48,7 @@ export const AdminProducts = () => {
     <>
       <div className="flex justify-between items-end mb-10">
         <h1 className="text-4xl">Manage Products</h1>
-        <Link className="cursor-pointer" to="/">
+        <Link className="cursor-pointer" to="/admin/create-product">
           Create New Product
         </Link>
       </div>

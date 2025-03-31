@@ -32,12 +32,9 @@ function AdminTable<T extends { id: number | string }>({
                     <button
                       key={i}
                       onClick={() => action.onClick(row)}
-                      className={`px-2 py-1 rounded ${
-                        action.className ||
-                        "bg-blue-500 text-white hover:bg-blue-600"
-                      }`}
+                      className={`px-2 py-1 rounded ${action.className || ""}`}
                     >
-                      {action.label}
+                      {action.getLabel ? action.getLabel(row) : action.label}
                     </button>
                   ))}
                 </td>

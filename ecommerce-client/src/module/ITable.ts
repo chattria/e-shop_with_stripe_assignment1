@@ -7,7 +7,8 @@ export type TableColumn<T> = {
 };
 
 export type TableAction<T> = {
-  label: ReactNode;
+  label?: ReactNode;
+  getLabel?: (row: T) => ReactNode;
   onClick: (row: T) => void;
   className?: string;
 };
