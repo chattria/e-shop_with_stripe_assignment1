@@ -15,7 +15,7 @@ export type TableAction<T> = {
 
 export type ICreateProduct = Pick<
   IProduct,
-  "name description price stock category image"
+  "name" | "description" | "price" | "stock" | "category" | "image"
 >;
 
 export type IUpdateProduct = Pick<
