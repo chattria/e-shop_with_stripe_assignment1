@@ -9,6 +9,8 @@ import { AdminProducts } from "./pages/AdminProducts";
 import { AdminCustomers } from "./pages/AdminCustomers";
 import { AdminUpdateProduct } from "./pages/AdminUpdateProduct";
 import { AdminCreateProduct } from "./pages/AdminCreateProduct";
+import { AdminUpdateCustomer } from "./pages/AdminUpdateCustomer";
+import { AdminCreateCustomer } from "./pages/AdminCreateCustomer";
 
 export const router = createBrowserRouter([
   {
@@ -52,6 +54,14 @@ export const router = createBrowserRouter([
       {
         path: "create-product",
         element: <AdminCreateProduct />,
+      },
+      {
+        path: "update-customer/:id",
+        element: <AdminUpdateCustomer />,
+      },
+      {
+        path: "create-customer",
+        element: <AdminCreateCustomer />,
       },
     ],
   },

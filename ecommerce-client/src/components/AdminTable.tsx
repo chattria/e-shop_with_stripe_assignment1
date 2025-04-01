@@ -22,8 +22,12 @@ function AdminTable<T extends { id: number | string }>({
           {data.map((row) => (
             <tr key={row.id} className="hover:bg-gray-50">
               {columns.map((col) => (
-                <td key={String(col.accessor)} className="p-3">
-                  {String(row[col.accessor])}
+                <td key={col.label} className="p-3">
+                  {col.render
+                    ? col.render(row)
+                    : col.accessor
+                    ? String(row[col.accessor])
+                    : ""}
                 </td>
               ))}
               {actions.length > 0 && (
