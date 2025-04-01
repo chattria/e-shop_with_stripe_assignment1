@@ -17,11 +17,6 @@ export const AdminUpdateProduct = () => {
     fetchProductByIdHandler(params.id).then((data) => setProduct(data));
   }, []);
 
-  const handleChange = (e: FormEvent<HTMLTextAreaElement>) => {
-    if (!product) return;
-    setProduct({ ...product, content: e.currentTarget.value });
-  };
-
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!product?.id) return;
