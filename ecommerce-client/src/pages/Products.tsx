@@ -13,7 +13,7 @@ export const Products = () => {
   return (
     <>
       <h1 className="my-20 text-5xl ">Wall Clock</h1>
-      <div className="flex gap-10">
+      <div className="flex flex-wrap gap-10 justify-center">
         {productList.map((product) => {
           return (
             <div
