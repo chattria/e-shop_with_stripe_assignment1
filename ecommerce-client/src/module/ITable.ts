@@ -20,7 +20,7 @@ export type ICreateProduct = Pick<
 
 export type IUpdateProduct = Pick<
   IProduct,
-  "name description price stock category image"
+  "name" | "description" | "price" | "stock" | "category" | "image"
 >;
 
 export interface ITableProps<T extends { id: number | string }> {
