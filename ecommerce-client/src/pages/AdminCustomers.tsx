@@ -61,7 +61,7 @@ export const AdminCustomers = () => {
 
       <AdminTable
         data={list.filter(
-          (p): p is ICustomer & { id: number } => p.id !== null
+          (c): c is ICustomer & { id: number } => c.id !== null
         )}
         columns={columns}
         actions={actions}

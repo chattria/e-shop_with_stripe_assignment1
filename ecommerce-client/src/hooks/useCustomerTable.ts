@@ -34,7 +34,7 @@ export const useCustomerTable = () => {
     try {
       return await fetchCustomer(id);
     } catch (error) {
-      setError("Error fetching pun");
+      setError("Error fetching customer");
       throw error;
     } finally {
       setIsLoading(false);
@@ -48,7 +48,7 @@ export const useCustomerTable = () => {
     try {
       return await createCustomer(payload);
     } catch (error) {
-      setError("Error creating pun");
+      setError("Error creating customer");
       throw error;
     } finally {
       setIsLoading(false);

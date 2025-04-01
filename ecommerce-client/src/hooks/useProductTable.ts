@@ -34,7 +34,7 @@ export const useProductTable = () => {
     try {
       return await fetchProduct(id);
     } catch (error) {
-      setError("Error fetching pun");
+      setError("Error fetching product");
       throw error;
     } finally {
       setIsLoading(false);
@@ -48,7 +48,7 @@ export const useProductTable = () => {
     try {
       return await createProduct(payload);
     } catch (error) {
-      setError("Error creating pun");
+      setError("Error creating product");
       throw error;
     } finally {
       setIsLoading(false);
