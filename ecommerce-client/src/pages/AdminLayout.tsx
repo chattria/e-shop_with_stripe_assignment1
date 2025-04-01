@@ -10,7 +10,6 @@ export const AdminLayout = () => {
       <main className="flex-1 mt-10">
         <Outlet />
       </main>
-      <footer className="h-[5dvh] content-center">footer</footer>
     </div>
   );
 };
