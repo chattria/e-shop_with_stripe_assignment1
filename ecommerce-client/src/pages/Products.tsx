@@ -5,7 +5,7 @@ import { useCart } from "../hooks/useCart";
 
 export const Products = () => {
   const [productList, setProductList] = useState<IProduct[]>([]);
-  const { handleAddToCart, cart } = useCart();
+  const { handleAddToCart } = useCart();
 
   useEffect(() => {
     axios.get<IProduct[]>("http://localhost:3000/products").then((response) => {

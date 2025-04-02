@@ -1,8 +1,10 @@
 import { useCart } from "../hooks/useCart";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaTrashAlt } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 export const Cart = () => {
+  const navigate = useNavigate();
   const {
     cart,
     totalCartPrice,
@@ -76,12 +78,20 @@ export const Cart = () => {
 
           <div className="flex justify-between items-center mt-6 border-t pt-4">
             <p className="text-xl font-bold">Total: {totalCartPrice} SEK</p>
-            <button
-              onClick={handleResetCart}
-              className="bg-red-100 text-red-600 px-4 py-2 rounded hover:bg-red-200"
-            >
-              Clear Cart
-            </button>
+            <div className="flex gap-5">
+              <button
+                onClick={handleResetCart}
+                className="bg-red-100 text-red-600 px-4 py-2 rounded-lg hover:bg-red-200 cursor-pointer"
+              >
+                Clear Cart
+              </button>
+              <button
+                onClick={() => navigate("/checkout")}
+                className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </>
       )}
