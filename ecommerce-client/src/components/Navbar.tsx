@@ -3,10 +3,10 @@ import { FaRegClock, FaCartShopping } from "react-icons/fa6";
 
 export const Navbar = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between h-full items-center">
       <div className="logo text-lg">
         <NavLink to={"/"}>
-          <FaRegClock />
+          <FaRegClock size={20} />
         </NavLink>
       </div>
 
@@ -17,7 +17,9 @@ export const Navbar = () => {
       </div>
 
       <div className="cart text-lg">
-        <FaCartShopping />
+        <NavLink to="/cart">
+          <FaCartShopping size={20} />
+        </NavLink>
       </div>
     </div>
   );
