@@ -12,8 +12,9 @@ import { AdminCreateProduct } from "./pages/AdminCreateProduct";
 import { AdminUpdateCustomer } from "./pages/AdminUpdateCustomer";
 import { AdminCreateCustomer } from "./pages/AdminCreateCustomer";
 import { Cart } from "./pages/Cart";
-import { CheckOut } from "./pages/CheckOut";
+import { Confirmation } from "./pages/Confirmation";
 import { Payment } from "./pages/Payment";
+import { CustomerForm } from "./pages/CustomerForm";
 
 export const router = createBrowserRouter([
   {
@@ -33,12 +34,16 @@ export const router = createBrowserRouter([
         element: <Cart />,
       },
       {
-        path: "/checkout",
-        element: <CheckOut />,
+        path: "/customerform",
+        element: <CustomerForm />,
       },
       {
         path: "/payment",
         element: <Payment />,
+      },
+      {
+        path: "/confirmation",
+        element: <Confirmation />,
       },
     ],
   },

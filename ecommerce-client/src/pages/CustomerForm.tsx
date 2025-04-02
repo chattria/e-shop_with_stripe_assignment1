@@ -125,7 +125,7 @@ export const CustomerForm = () => {
         <div className="flex justify-center pt-4">
           <button
             type="submit"
-            className="w-16 bg-blue-500 text-white py-2 rounded hover:bg-blue-700 transition"
+            className="w-16 bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-700 transition cursor-pointer"
           >
             Pay
           </button>
@@ -134,5 +134,3 @@ export const CustomerForm = () => {
     </div>
   );
 };
-
-export default CustomerForm;
