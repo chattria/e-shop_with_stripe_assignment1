@@ -15,6 +15,7 @@ import { Cart } from "./pages/Cart";
 import { Confirmation } from "./pages/Confirmation";
 import { Payment } from "./pages/Payment";
 import { CustomerForm } from "./pages/CustomerForm";
+import { AdminOrderDetail } from "./pages/AdminOrderDetail";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
       {
         path: "create-customer",
         element: <AdminCreateCustomer />,
+      },
+      {
+        path: "orders/:id",
+        element: <AdminOrderDetail />,
       },
     ],
   },

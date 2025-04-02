@@ -4,7 +4,7 @@ import { IOrder } from "../../../ecommerce-api/src/models/IOrder";
 import { useOrderTable } from "../hooks/useOrderTable";
 import { useEffect } from "react";
 import { TableAction, TableColumn } from "../module/ITable";
-import { FaEdit, FaTrashAlt } from "react-icons/fa";
+import { FaEye, FaTrashAlt } from "react-icons/fa";
 
 export const AdminOrders = () => {
   const { list, error, isLoading, fetchListHandler, deleteOrderHandler } =
@@ -30,15 +30,19 @@ export const AdminOrders = () => {
   ];
 
   const actions: TableAction<IOrder & { id: number }>[] = [
-    // {
-    //   getLabel: (order) => (
-    //     <Link to={`/admin/update-customer/${order.id}`}>
-    //       <FaEdit size={16} />
-    //     </Link>
-    //   ),
-    //   onClick: () => {},
-    //   className: "hover:text-blue-600 cursor-pointer",
-    // },
+    {
+      getLabel: (order) => (
+        <Link
+          to={`/admin/orders/${order.id}`}
+          className="flex items-center gap-1"
+        >
+          <FaEye size={16} />
+          <span>View</span>
+        </Link>
+      ),
+      onClick: () => {},
+      className: "hover:text-blue-600 cursor-pointer",
+    },
     {
       label: <FaTrashAlt size={16} />,
       onClick: (o) => {
